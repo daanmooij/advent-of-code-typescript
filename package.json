@@ -1,15 +1,19 @@
 {
-  "name": "advent-of-code-typescript",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "start": "bun run index.ts"
-  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@biomejs/biome": "2.4.16",
+    "@types/bun": "latest",
+    "ultracite": "7.8.3"
   },
+  "name": "advent-of-code-typescript",
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "scripts": {
+    "start": "bun run index.ts",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "type": "module",
+  "module": "index.ts",
+  "private": true
 }
