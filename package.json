@@ -2,6 +2,8 @@
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
     "@types/bun": "latest",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
     "ultracite": "7.8.3"
   },
   "name": "advent-of-code-typescript",
@@ -11,11 +13,17 @@
   "scripts": {
     "start": "bun run index.ts",
     "check": "ultracite check",
-    "fix": "ultracite fix"
+    "fix": "ultracite fix",
+    "prepare": "husky"
   },
   "type": "module",
   "module": "index.ts",
   "private": true,
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,jsonc,css,md}": [
+      "ultracite fix"
+    ]
+  },
   "dependencies": {
     "@clack/prompts": "^1.5.1"
   }
