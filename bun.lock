@@ -4,6 +4,9 @@
   "workspaces": {
     "": {
       "name": "advent-of-code-typescript",
+      "dependencies": {
+        "@clack/prompts": "^1.5.1",
+      },
       "devDependencies": {
         "@biomejs/biome": "2.4.16",
         "@types/bun": "latest",
